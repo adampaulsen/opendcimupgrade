@@ -28,7 +28,8 @@ drawings=$oldversionfolder/drawings
 
 #functons defined here
 config-data () {
-     grep $1 "$oldversionfoler"/db.inc.php | awk -F':' '{print $2}' | sed $'s/[^[:alnum:]\t]//g'
+        arg1=$1
+        grep $arg1 $oldversionfolder/db.inc.php | awk -F':' '{print $2}' | sed $'s/[^[:alnum:]\t]//g'
 }
 
 copywperm () {
